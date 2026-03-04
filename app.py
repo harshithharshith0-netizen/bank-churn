@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+import pickle
 
 model = pickle.load(open("churn_model.pkl","rb"))
 
@@ -19,4 +20,5 @@ if st.button("Predict"):
     if prediction == 1:
         st.error("Customer likely to churn")
     else:
+
         st.success("Customer likely to stay")
